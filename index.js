@@ -104,6 +104,13 @@ function placingString(nameMode, standing) {
 }
 
 function ordinal(i) {
+  if (i === 1) {
+    return '🥇';
+  } else if (i === 2) {
+    return '🥈';
+  } else if (i === 3) {
+    return '🥉';
+  }
   const abs = Math.abs(i);
   const rem = abs % 10;
   const isTeen = Math.floor(abs % 100 / 10) == 1;
